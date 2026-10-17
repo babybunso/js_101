@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title> Intro to Javascript</title>
+    </head>
+
+    <body>
+        <script>
+           // This is asingle line comment
+            /*
+            var username = prompt('Enter your name')
+            alert('Hello, ' + username 
+                + '\n\nWelcome to Javascript!');
+            confirm('Do you want to continue?');
+            console.log("Hello JS, from console window");
+            */
+
+
+           alert('Welcome to Simple Calculator App');
+           is_running = true;
+           while (is_running) {
+
+            
+               var x = prompt('Please enter the first number');
+               var y = prompt('Please enter the second number');
+               var ops_instruction = 'What is the operation you need?'
+                + '\n\nA - Addition\nS - Subtraction\nM - Multiplication\nD - Division'
+               var ops = prompt(ops_instruction);
+            
+               var answer = '';
+
+               if (ops == 'A' || ops == 'a') {
+                    answer = parseFloat(x) + parseFloat(y);
+                }     
+
+               else if (ops == 'S' || ops == 's') {
+                    answer = parseFloat(x) - parseFloat(y);
+               }
+
+               else if (ops == 'M' || ops == 'm') {
+                    answer = parseFloat(x) * parseFloat(y);
+                }
+
+                else if (ops == 'D' || ops == 'd') {
+                    answer = parseFloat(x) / parseFloat(y);
+                }
+
+                else {
+                    answer = 'Operations not supported.'
+                }
+
+                alert(answer);
+                
+                is_running = confirm('Do you want to continue?')
+          } // end while
+
+          alert('Thank for using our awesome Calculator App');
+
+        </script>
+    </body>
+</html>
